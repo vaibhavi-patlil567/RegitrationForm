@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Company Registration Form</string>
+    <string-array name="array_data">
+        <item>SelectedItem</item>
+    </string-array>
+
+</resources>

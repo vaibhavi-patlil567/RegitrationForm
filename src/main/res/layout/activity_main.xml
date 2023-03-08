@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2196F3"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/company_Details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#F61818"
+        android:gravity="center"
+        android:text="Company Details"
+        android:textColor="#F5171717"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/comapny_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="20dp"
+        android:text="Company Name"
+        android:textColor="#F5FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ecompany_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/white"
+        android:ems="8"
+        android:hint="Enter Company Name"
+        android:inputType="textPersonName"
+        android:textColor="#101010"
+        android:textColorHint="#918D8D"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/company_Details" />
+
+    <TextView
+        android:id="@+id/owner_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Owner Name"
+        android:textColor="#F0FFFFFF"
+        android:textColorHint="#F2FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/eowner_name"
+        app:layout_constraintEnd_toEndOf="@+id/comapny_name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/comapny_name" />
+
+    <EditText
+        android:id="@+id/eowner_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/white"
+        android:ems="8"
+        android:hint="Enter Owner Name"
+        android:inputType="textPersonName"
+        android:textColor="#101010"
+        android:textColorHint="#FF918D8D"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/ecompany_name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ecompany_name"
+        app:layout_constraintTop_toBottomOf="@+id/ecompany_name" />
+
+    <TextView
+        android:id="@+id/company_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Company Address"
+        android:textColor="#EDFFFFFF"
+        android:textColorHint="#EDFFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/ecompany_address"
+        app:layout_constraintEnd_toEndOf="@+id/owner_name"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toStartOf="@+id/owner_name"
+        tools:text="Company Address" />
+
+    <EditText
+        android:id="@+id/ecompany_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/white"
+        android:ems="8"
+        android:hint="Company Address"
+        android:inputType="textPersonName"
+        android:textColor="#101010"
+        android:textColorHint="#FF918D8D"
+        app:layout_constraintEnd_toEndOf="@+id/eowner_name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/eowner_name"
+        app:layout_constraintTop_toBottomOf="@+id/eowner_name" />
+
+    <TextView
+        android:id="@+id/state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="State"
+        android:textColor="#EDFFFFFF"
+        android:textColorHint="#EDFFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/company_address"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/company_address"
+        app:layout_constraintTop_toBottomOf="@+id/company_address" />
+
+    <Spinner
+        android:id="@+id/estate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:entries="@array/array_data"
+        android:textColor="#101010"
+        app:layout_constraintEnd_toEndOf="@+id/ecompany_address"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ecompany_address"
+        app:layout_constraintTop_toBottomOf="@+id/ecompany_address" />
+
+    <TextView
+        android:id="@+id/city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="City"
+        android:textColor="#EDFFFFFF"
+        android:textColorHint="#EDFFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/state"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/state" />
+
+    <Spinner
+        android:id="@+id/ecity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:entries="@array/array_data"
+        android:textColor="#101010"
+        app:layout_constraintEnd_toEndOf="@+id/estate"
+        app:layout_constraintStart_toStartOf="@+id/estate"
+        app:layout_constraintTop_toBottomOf="@+id/estate" />
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Landline Number"
+        android:textColor="#EDFFFFFF"
+        android:textColorHint="#EDFFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/enumber"
+        app:layout_constraintEnd_toEndOf="@+id/city"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/city" />
+
+    <EditText
+        android:id="@+id/enumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:ems="8"
+        android:hint="Landline Number"
+        android:inputType="phone"
+        android:textColor="#101010"
+        android:textColorHint="#FF918D8D"
+        app:layout_constraintEnd_toEndOf="@+id/ecity"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ecity"
+        app:layout_constraintTop_toBottomOf="@+id/ecity" />
+
+    <TextView
+        android:id="@+id/website"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Website"
+        android:textColor="#EDFFFFFF"
+        android:textColorHint="#EDFFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/ewebsite"
+        app:layout_constraintEnd_toEndOf="@+id/number"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/number" />
+
+    <EditText
+        android:id="@+id/ewebsite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:ems="8"
+        android:hint="Enter Domain Name"
+        android:inputType="textPersonName"
+        android:textColor="#101010"
+        android:textColorHint="#FF918D8D"
+        app:layout_constraintEnd_toEndOf="@+id/enumber"
+        app:layout_constraintHorizontal_bias="0.789"
+        app:layout_constraintStart_toStartOf="@+id/enumber"
+        app:layout_constraintTop_toBottomOf="@+id/enumber" />
+
+    <TextView
+        android:id="@+id/gst_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GST Number"
+        android:textColor="#EDFFFFFF"
+        android:textColorHint="#EDFFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/egst_number"
+        app:layout_constraintEnd_toEndOf="@+id/emailid"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/emailid" />
+
+    <EditText
+        android:id="@+id/egst_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:ems="8"
+        android:hint="Enter 15 Digit GST Number"
+        android:inputType="textPersonName"
+        android:textColor="#101010"
+        android:textColorHint="#FF918D8D"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/eemailid"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/eemailid"
+        app:layout_constraintTop_toBottomOf="@+id/eemailid" />
+
+    <TextView
+        android:id="@+id/pan_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pan Number"
+        android:textColor="#EDFFFFFF"
+        android:textColorHint="#EDFFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/epan_number"
+        app:layout_constraintEnd_toEndOf="@+id/gst_number"
+        app:layout_constraintHorizontal_bias="0.24"
+        app:layout_constraintStart_toStartOf="@+id/gst_number" />
+
+    <EditText
+        android:id="@+id/epan_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:ems="8"
+        android:hint="XXXXXXXXXX"
+        android:inputType="textPersonName"
+        android:textColor="#101010"
+        android:textColorHint="#FF918D8D"
+        app:layout_constraintEnd_toEndOf="@+id/egst_number"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/egst_number"
+        app:layout_constraintTop_toBottomOf="@+id/egst_number" />
+
+    <TextView
+        android:id="@+id/emailid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email ID"
+        android:textColor="#EDFFFFFF"
+        android:textColorHint="#EDFFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/eemailid"
+        app:layout_constraintEnd_toStartOf="@+id/eemailid"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/website" />
+
+    <EditText
+        android:id="@+id/eemailid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:ems="8"
+        android:hint="xxxxx@gmail.com"
+        android:inputType="textPersonName"
+        android:textColor="#101010"
+        android:textColorHint="#FF918D8D"
+        app:layout_constraintEnd_toEndOf="@+id/ewebsite"
+        app:layout_constraintStart_toStartOf="@+id/ewebsite"
+        app:layout_constraintTop_toBottomOf="@+id/ewebsite" />
+
+    <TextView
+        android:id="@+id/pancard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pan Card"
+        android:textColor="#EDFFFFFF"
+        android:textColorHint="#EDFFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/echoose_file"
+        app:layout_constraintEnd_toStartOf="@+id/echoose_file"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/pan_number" />
+
+    <Button
+        android:id="@+id/echoose_file"
+        android:layout_width="130dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:onClick="openfilechooser"
+        android:text="Choose File"
+        android:textColor="#EDFFFFFF"
+        android:textColorLink="#EDFFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/epan_number"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/epan_number"
+        app:layout_constraintTop_toBottomOf="@+id/epan_number" />
+
+    <TextView
+        android:id="@+id/contact_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#F61818"
+        android:gravity="center"
+        android:text="Contact Details"
+        android:textColor="#F5171717"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/echoose_file"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="@+id/pancard"
+        app:layout_constraintTop_toBottomOf="@+id/echoose_file" />
+
+    <TextView
+        android:id="@+id/contact_person_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="Contact Person Name"
+        android:textColor="#F5FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/econtact_person_name"
+        app:layout_constraintEnd_toStartOf="@+id/econtact_person_name"
+        app:layout_constraintHorizontal_bias="0.263"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/econtact_person_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="28dp"
+        android:background="@color/white"
+        android:ems="8"
+        android:hint="Enter Contact Person Name"
+        android:inputType="textPersonName"
+        android:textColor="#101010"
+        android:textColorHint="#918D8D"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contact_details" />
+
+    <TextView
+        android:id="@+id/mobile_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mobile Number"
+        android:textColor="#EDFFFFFF"
+        android:textColorHint="#EDFFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/emobile_number"
+        app:layout_constraintEnd_toStartOf="@+id/emobile_number"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/contact_person_name" />
+
+    <EditText
+        android:id="@+id/emobile_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:ems="8"
+        android:hint="Mobile Number"
+        android:inputType="phone"
+        android:textColor="#101010"
+        android:textColorHint="#FF918D8D"
+        app:layout_constraintEnd_toEndOf="@+id/econtact_person_name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/econtact_person_name"
+        app:layout_constraintTop_toBottomOf="@+id/econtact_person_name" />
+    <TextView
+        android:id="@+id/cemailid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email ID"
+        android:textColor="#EDFFFFFF"
+        android:textColorHint="#EDFFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/ecemailid"
+        app:layout_constraintEnd_toStartOf="@+id/ecemailid"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/mobile_number" />
+
+    <EditText
+        android:id="@+id/ecemailid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:ems="8"
+        android:hint="xxxxx@gmail.com"
+        android:inputType="textPersonName"
+        android:textColor="#101010"
+        android:textColorHint="#FF918D8D"
+        app:layout_constraintEnd_toEndOf="@+id/emobile_number"
+        app:layout_constraintStart_toStartOf="@+id/emobile_number"
+        app:layout_constraintTop_toBottomOf="@+id/emobile_number" />
+
+    <TextView
+        android:id="@+id/cnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Landline Number"
+        android:textColor="#EDFFFFFF"
+        android:textColorHint="#EDFFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/ecnumber"
+        app:layout_constraintEnd_toStartOf="@+id/ecnumber"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cemailid" />
+
+    <EditText
+        android:id="@+id/ecnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:ems="8"
+        android:hint="Landline Number"
+        android:inputType="phone"
+        android:textColor="#101010"
+        android:textColorHint="#FF918D8D"
+        app:layout_constraintEnd_toEndOf="@+id/ecemailid"
+        app:layout_constraintStart_toStartOf="@+id/ecemailid"
+        app:layout_constraintTop_toBottomOf="@+id/ecemailid" />
+    
+    <TextView
+        android:id="@+id/extention_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Extention Number"
+        android:textColor="#EDFFFFFF"
+        android:textColorHint="#EDFFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/eextention_number"
+        app:layout_constraintEnd_toStartOf="@+id/eextention_number"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cnumber" />
+
+    <EditText
+        android:id="@+id/eextention_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:ems="8"
+        android:hint="Extention Number"
+        android:inputType="phone"
+        android:textColor="#101010"
+        android:textColorHint="#FF918D8D"
+        app:layout_constraintEnd_toEndOf="@+id/ecnumber"
+        app:layout_constraintStart_toStartOf="@+id/ecnumber"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/ecnumber" />
+
+    <TextView
+        android:id="@+id/gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="Gender"
+        android:textColor="#EDFFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/extention_number"
+        app:layout_constraintHorizontal_bias="0.025"
+        app:layout_constraintStart_toStartOf="@+id/extention_number"
+        app:layout_constraintTop_toBottomOf="@+id/extention_number" />
+
+    <RadioGroup
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+    </RadioGroup>
+
+    <RadioButton
+        android:id="@+id/option1"
+        android:layout_width="82dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="5dp"
+        android:text="Male"
+        android:textColor="#EDFFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/option2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/eextention_number"
+        app:layout_constraintTop_toBottomOf="@+id/eextention_number" />
+
+    <RadioButton
+        android:id="@+id/option2"
+        android:layout_width="86dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:text="Female"
+        android:textColor="#EDFFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/eextention_number"
+        app:layout_constraintTop_toBottomOf="@+id/eextention_number" />
+    <TextView
+        android:id="@+id/position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Position"
+        android:textColor="#EDFFFFFF"
+        android:textColorHint="#EDFFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/gender"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/gender"
+        app:layout_constraintTop_toBottomOf="@+id/gender" />
+
+    <Spinner
+        android:id="@+id/eposition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:entries="@array/array_data"
+        android:textColor="#101010"
+        app:layout_constraintEnd_toEndOf="@+id/option1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/option1"
+        app:layout_constraintTop_toBottomOf="@+id/option1" />
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Password"
+        android:textColor="#EDFFFFFF"
+        android:textColorHint="#EDFFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/position"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/position"
+        app:layout_constraintTop_toBottomOf="@+id/position" />
+
+    <EditText
+        android:id="@+id/epassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:ems="8"
+        android:hint="Enter the password"
+        android:inputType="textPassword"
+        android:textColor="#EDFFFFFF"
+        android:textColorHint="#FF918D8D"
+        app:layout_constraintEnd_toEndOf="@+id/option1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/option1"
+        app:layout_constraintTop_toBottomOf="@+id/eposition" />
+
+    <TextView
+        android:id="@+id/repassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Re-password"
+        android:textColor="#EDFFFFFF"
+        android:textColorHint="#EDFFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/password"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <EditText
+        android:id="@+id/erepassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:ems="8"
+        android:hint="Enter the re-password"
+        android:inputType="textPassword"
+        android:textColor="#EDFFFFFF"
+        android:textColorHint="#FF918D8D"
+        app:layout_constraintEnd_toEndOf="@+id/epassword"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/epassword"
+        app:layout_constraintTop_toBottomOf="@+id/epassword" />
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Submit"
+        app:layout_constraintEnd_toEndOf="@+id/erepassword"
+        app:layout_constraintStart_toStartOf="@+id/repassword"
+        app:layout_constraintTop_toBottomOf="@+id/erepassword" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
